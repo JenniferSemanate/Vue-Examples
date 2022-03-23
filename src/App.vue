@@ -10,7 +10,7 @@
 
     <Counter :max="max1" />
 
-    <Counter :max="10" />
+    <Counter :max="15" />
 
     <Counter :max="20" />
   </div>
@@ -29,7 +29,9 @@ export default {
   },
 
   data() {
-    max1: 10;
+    return {
+      max1: 10,
+    };
   },
 };
 </script>
