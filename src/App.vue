@@ -1,13 +1,19 @@
 <template>
-  <div>Hola</div>
+  <div class="container mx-auto">
+    <div>Hola</div>
 
-  <!-- 3. utilitzar el component al template -->
-  <!-- <HelloWorld />
+    <!-- 3. utilitzar el component al template -->
+    <!-- <HelloWorld />
 
   <HelloWorld /> -->
-  <Counter />
+    <input type="number" v-model.number="max1" class="border" />
 
-  <Counter />
+    <Counter :max="max1" />
+
+    <Counter :max="10" />
+
+    <Counter :max="20" />
+  </div>
 </template>
 
 <script>
@@ -20,6 +26,10 @@ export default {
   components: {
     HelloWorld,
     Counter,
+  },
+
+  data() {
+    max1: 10;
   },
 };
 </script>
